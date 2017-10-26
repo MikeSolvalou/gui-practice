@@ -30,7 +30,7 @@ public class Hello extends Application {
 		
 		
 		Text scenetitle = new Text("Welcome");
-		scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+		scenetitle.setId("welcome-text");
 		grid.add(scenetitle, 0, 0, 2, 1);
 
 		Label userName = new Label("User Name:");
@@ -55,10 +55,9 @@ public class Hello extends Application {
 		
 		final Text actiontarget = new Text();
         grid.add(actiontarget, 1, 6);
-        
+        actiontarget.setId("actiontarget");
         
         btn.setOnAction( (ActionEvent event) -> {
-            actiontarget.setFill(Color.FIREBRICK);
             actiontarget.setText("Sign in button pressed");
         });
         
