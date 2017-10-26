@@ -1,4 +1,4 @@
-package hello;
+package login;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -17,7 +17,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Hello extends Application {
+public class Login extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -63,7 +63,7 @@ public class Hello extends Application {
         
 		
 		Scene scene = new Scene(grid, 300, 275);
-		scene.getStylesheets().add(Hello.class.getResource("style.css").toExternalForm());
+		scene.getStylesheets().add(Login.class.getResource("style.css").toExternalForm());
 		primaryStage.setScene(scene);
 				
 		primaryStage.setTitle("JavaFX Welcome");
