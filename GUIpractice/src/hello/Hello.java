@@ -64,8 +64,9 @@ public class Hello extends Application {
         
 		
 		Scene scene = new Scene(grid, 300, 275);
+		scene.getStylesheets().add(Hello.class.getResource("style.css").toExternalForm());
 		primaryStage.setScene(scene);
-		
+				
 		primaryStage.setTitle("JavaFX Welcome");
 		primaryStage.show();
 	}
