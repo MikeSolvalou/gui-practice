@@ -36,9 +36,7 @@
 	-fx-text-fill: white;
 }
 .browser-toolbar{
-	-fx-base: #505359;
-	-fx-background: #505359;
-	-fx-shadow-highlight-color: transparent;
+	-fx-background-color: #505359;
 	-fx-spacing: 5;
-	-fx-padding: 4 4 4 4;
+	-fx-padding: 4;
 }

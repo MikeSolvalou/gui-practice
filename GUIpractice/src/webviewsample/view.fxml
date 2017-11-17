@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane fx:controller="webviewsample.ViewController" xmlns:fx="http://javafx.com/fxml"
+	fx:id="root" styleClass="root">
+
+<center>
+	<WebView fx:id="webView"></WebView>
+</center>
+
+<bottom>
+	<HBox>
+		<Hyperlink text="Java API ref">
+			<graphic><ImageView><Image url="@partners.png"/></ImageView></graphic>
+			<properties hyperlink-target="https://docs.oracle.com/javase/8/docs/api"/>
+		</Hyperlink>
+		<Hyperlink text="JavaFX API ref">
+			<graphic><ImageView><Image url="@partners.png"/></ImageView></graphic>
+			<properties hyperlink-target="https://docs.oracle.com/javase/8/javafx/api/toc.htm"/>
+		</Hyperlink>
+		<Hyperlink text="JavaFX CSS ref">
+			<graphic><ImageView><Image url="@partners.png"/></ImageView></graphic>
+			<properties hyperlink-target="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html"/>
+		</Hyperlink>
+		<Hyperlink text="FXML Guide">
+			<graphic><ImageView><Image url="@partners.png"/></ImageView></graphic>
+			<properties hyperlink-target="https://docs.oracle.com/javase/8/javafx/api/javafx/fxml/doc-files/introduction_to_fxml.html"/>
+		</Hyperlink>
+	</HBox>
+</bottom>
+
+</BorderPane>
