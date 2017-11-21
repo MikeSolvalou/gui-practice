@@ -1,5 +1,6 @@
 package webviewsample;
 
+import javafx.application.Platform;
 import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Worker.State;
 import javafx.event.ActionEvent;
@@ -13,6 +14,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+
+import netscape.javascript.JSObject;
 
 
 class Browser extends Region {
@@ -87,6 +90,9 @@ class Browser extends Region {
 				(ObservableValue<? extends State> ov, State oldState, State newState) -> {
 					toolBar.getChildren().remove(toggleHelpTopics);
 					if (newState == State.SUCCEEDED) {
+						JSObject win = (JSObject) webEngine.executeScript("window");	//gets (pointer to?) js object named 'window'; becomes JSObject-class object in java
+						win.setMember("app", new JavaApp());							//adds member to window object named 'app'; app.exit() in js calls the JavaApp.exit() method from java
+						
 						if (needDocumentationButton) {
 							toolBar.getChildren().add(toggleHelpTopics);
 						}
@@ -99,6 +105,14 @@ class Browser extends Region {
 		//add components to this Browser object; layout handled by overriding Region.layoutChildren method 
 		getChildren().add(toolBar);
 		getChildren().add(webView);
+	}
+	
+	
+	// js interface object
+	public class JavaApp{
+		public void exit(){
+			Platform.exit();	//exits javafx application
+		}
 	}
 	
 	@Override protected void layoutChildren() {	//for a Region, have to do this manually(?)
