@@ -1,4 +1,4 @@
-package webviewsample;
+package fxmlwebview;
 
 import java.util.ArrayList;
 

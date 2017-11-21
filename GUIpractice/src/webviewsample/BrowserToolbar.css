@@ -35,6 +35,11 @@
 .browser-toolbar .hyperlink, .browser-toolbar .button, .browser-toolbar{
 	-fx-text-fill: white;
 }
+.browser-toolbar .button{
+	-fx-background-color: linear-gradient(#5a5d63, #3c3e42);
+	-fx-border-color: #393843;
+	-fx-border-radius: 3;
+}
 .browser-toolbar{
 	-fx-background-color: #505359;
 	-fx-spacing: 5;
