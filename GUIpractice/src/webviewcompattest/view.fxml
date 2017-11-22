@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane fx:controller="webviewcompattest.ViewController" xmlns:fx="http://javafx.com/fxml"
+	fx:id="root" styleClass="root">
+
+<center>
+	<WebView fx:id="webView"></WebView>
+</center>
+
+<bottom>
+	<HBox>
+		<Hyperlink text="Compat Testpage 1">
+			<graphic><ImageView><Image url="@partners.png"/></ImageView></graphic>
+			<!-- don't prefix with / , rel to current directory-->
+			<properties hyperlink-target="web/index.html"/>
+		</Hyperlink>
+	</HBox>
+</bottom>
+
+</BorderPane>

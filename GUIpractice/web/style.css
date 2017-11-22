@@ -1,0 +1,14 @@
+svg {
+  border: 1px solid black
+}
+
+path {
+  fill:transparent;
+  stroke:red;
+  stroke-width:100;
+  stroke-dasharray: 18,2;
+}
+
+path:hover {  /*hover hit-check in javafx webview is unreliable...*/
+  opacity:0.5;
+}
